@@ -20,7 +20,7 @@ A minimal single-user RFP management web app demonstrating:
 2. Setup backend:
    - `cd backend`
    - `npm install`
-   - copy `.env.example` → `.env` and fill variables (MONGODB_URI, OPENAI_API_KEY, SMTP_*, IMAP_* if using)
+   - .env fill variables (MONGODB_URI, OPENAI_API_KEY, SMTP_*, IMAP_* if using)
    - `npm run dev`
 3. Setup frontend:
    - `cd frontend`
@@ -31,17 +31,3 @@ A minimal single-user RFP management web app demonstrating:
 
 ## API endpoints
 (see list: /api/rfps, /api/vendors, /api/proposals)
-
-## Assumptions & limitations
-- Single-user flow only (no auth)
-- Email reply parsing may fail on complex attachments (would need attachment OCR/parse)
-- Inbound email watcher is a basic poller — in production use inbound email webhooks
-
-## What I'd improve next
-- Add authentication + roles
-- Use webhooks for inbound email or a transactional provider (Mailgun, SendGrid)
-- Better attachments parsing (extract tables in PDFs with OCR)
-- Improve schema validation and unit tests
-
-## Demo
-(Record a 5–10 minute Loom showing: create RFP, send to vendor, reply and automatic parsing, comparison)
